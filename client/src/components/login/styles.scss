@@ -1,0 +1,46 @@
+$primaryColor: #1a237e;  // Dark Blue
+$secondaryColor: #3949ab;  // Slightly Lighter Blue
+$errorColor: #d32f2f;  // Red
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  label {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+
+  input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid $secondaryColor;
+    border-radius: 4px;
+    background-color: $primaryColor;
+    color: white;
+    outline: none;
+    ::placeholder {
+      color: lighten($secondaryColor, 20%);
+    }
+  }
+
+  .error {
+    color: $errorColor;
+    margin-bottom: 16px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: $secondaryColor;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: darken($secondaryColor, 10%);
+    }
+  }
+}
